@@ -1,0 +1,32 @@
+.App{
+    text-align: center;
+}
+
+.row{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block{
+    width: 200px;
+    border: 1px solid #000;
+    border-radius: 10px;
+
+}
+
+
+.content{
+    text-align: start;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.content h3{
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.content h6{
+    font-weight: 400;
+}
