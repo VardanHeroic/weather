@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Block from './Block'
 
 
-export default function Weather({ city }) {
+export default function Weather({ city, isFahrenheit }) {
     const [days, setDays] = useState([])
     const [cityName, setCityName] = useState(city)
     useEffect(() => {
@@ -21,7 +21,7 @@ export default function Weather({ city }) {
             <h1 className='title'>{`Weather in ${cityName}`}</h1>
             <div className="row">
                 {
-                    days.map((day_data, i) => <Block data={day_data} key={i} />)
+                    days.map((day_data, i) => <Block isFahrenheit={isFahrenheit} data={day_data} key={i} />)
                 }
 
             </div>
