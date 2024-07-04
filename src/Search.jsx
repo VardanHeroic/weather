@@ -1,8 +1,11 @@
+import searchImg from './search.png';
+
 export default function Search({setCity}) {
     return (
-        <form onSubmit={e => {e.preventDefault(); setCity(e.target[0].value)}}>
-            <input type="text"/>
-            <button type="submit">search</button>
+        <form className="search-form" onSubmit={e => {e.preventDefault(); setCity(e.target[0].value)}}>
+            <img className="search-icon" src={searchImg} />
+            <input className="search-input" placeholder="Search location..." type="text"/>
+            <input type="submit" hidden />
         </form>
     )
 }

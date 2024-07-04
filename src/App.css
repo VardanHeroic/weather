@@ -41,6 +41,10 @@ body{
 
 
 
+
+
+
+
 .switch {
   position: relative;
   display: inline-block;
@@ -86,4 +90,37 @@ input:checked + .slider:before {
   -webkit-transform: translateX(58px);
   -ms-transform: translateX(58px);
   transform: translateX(58px);
+}
+
+
+
+.search-icon{
+    position: absolute;
+    width: 25px;
+    top: 10px;
+    left: 20px;
+}
+.search-input::placeholder{
+    font-family: "Poppins", 'sans-serif';
+    font-weight: 300;
+    /* font-size: 1.35em; */
+    color:#524E4E;
+}
+.search-input{
+    border-radius: 18px;
+    height: 44px;
+    width: 500px;
+    background: #d9d9d9;
+    border: none;
+    outline: none;
+    font-size: 1.35em;
+    padding-left: 60px;
+    font-family: "Poppins", 'sans-serif';
+}
+.search-form{
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+
 }
