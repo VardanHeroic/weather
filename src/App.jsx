@@ -5,7 +5,7 @@ import Header from './Header'
 import { useState } from 'react';
 
 export default function App() {
-    let [city, setCity] = useState('Erevan')
+    let [city, setCity] = useState('Yerevan')
     let [isFahrenheit, setisFahrenheit] = useState(false)
 
     return (

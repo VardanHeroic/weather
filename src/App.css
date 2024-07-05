@@ -24,7 +24,7 @@ body{
 }
 
 
-.content{
+.block-content{
     text-align: start;
     padding-left: 10px;
     margin-bottom: 10px;
@@ -103,10 +103,9 @@ input:checked + .slider:before {
 .search-input::placeholder{
     font-family: "Poppins", 'sans-serif';
     font-weight: 300;
-    /* font-size: 1.35em; */
-    color:#524E4E;
 }
 .search-input{
+    color:#524E4E;
     border-radius: 18px;
     height: 44px;
     width: 500px;
@@ -123,4 +122,58 @@ input:checked + .slider:before {
     width: fit-content;
     margin: 0 auto;
 
+}
+
+
+.currentWeatherBlock{
+    margin: 0 auto;
+    margin-top: 48px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(255, 250, 250, 0.25), 0 4px 4px 0 rgba(253, 245, 245, 0.25);
+    background: linear-gradient(147deg, #ad36cb 26.56%, #333 68.75%);
+    border-radius: 32px;
+    width: 817px;
+    height: 425px;
+    padding-left: 28px;
+    padding-bottom: 5px;
+    padding-top: 35px;
+}
+
+.currentWeatherBlock-header{
+    text-align: left;
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff;
+
+}
+
+.currentWeatherBlock-main{
+    position: relative;
+}
+
+.currentWeatherBlock-spot{
+    padding-left: 3px;
+}
+
+.currentWeatherBlock-temperature{
+    display: inline-block;
+    margin-top: 67px;
+    font-weight: 300;
+    font-size: 70px;
+    color: #f2f1f1;
+}
+
+.currentWeatherBlock-temperature img{
+    padding-right: 25px;
+    vertical-align: middle;
+}
+
+.currentWeatherBlock-date{
+    position: absolute;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    top: 165px;
+    left: 0;
 }

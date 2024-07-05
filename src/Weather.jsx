@@ -24,13 +24,17 @@ export default function Weather({ city, isFahrenheit }) {
             })
     },[city])
 
+
+    function toF(temp) {
+       return Math.round(1.8*temp +32)
+    }
+
     return (
         <div className="weather">
-            <h1 className='title'>{`Weather in ${cityName}`}</h1>
-            <CurrentWeatherBlock data={currentWeather} />
+            <CurrentWeatherBlock toF={toF} isFahrenheit={isFahrenheit} data={currentWeather} />
             <div className="row">
                 {
-                    days.map((day_data, i) => <Block isFahrenheit={isFahrenheit} data={day_data} key={i} />)
+                    days.map((day_data, i) => <Block toF={toF} isFahrenheit={isFahrenheit} data={day_data} key={i} />)
                 }
 
             </div>
