@@ -19,15 +19,26 @@ body{
 .block{
     width: 200px;
     border: 1px solid #000;
-    border-radius: 10px;
-
+    border-radius: 25px;
+    width: 121px;
+    height: 118px;
+    background: linear-gradient(180deg, #b32dd4 0%, rgba(217, 217, 217, 0) 100%);
 }
 
+.block-blackthing{
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: linear-gradient(130deg, #373333 0%, rgba(55, 51, 51, 0) 100%);
+    border-radius: 25px;
+    width: 121px;
+    height: 72px;
+    position: relative;
+    top: 56px;
+}
 
-.block-content{
-    text-align: start;
-    padding-left: 10px;
-    margin-bottom: 10px;
+.block-time{
+    z-index: 10;
+    position: relative;
 }
 
 .content h3{
@@ -155,8 +166,9 @@ input:checked + .slider:before {
 }
 
 .currentWeatherBlock-temperature{
+    line-height: 1;
     display: inline-block;
-    margin-top: 67px;
+    margin-top: 90px;
     font-weight: 300;
     font-size: 70px;
     color: #f2f1f1;
@@ -176,4 +188,19 @@ input:checked + .slider:before {
     color: #fff;
     top: 165px;
     left: 0;
+}
+
+.currentWeatherBlock-footer{
+    margin-top: 145px;
+}
+
+.currentWeatherBlock-table{
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.currentWeatherBlock-table tr:last-child{
+    font-size: 22px;
 }

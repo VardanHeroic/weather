@@ -6,7 +6,6 @@ export default function CurrentWeatherBlock({ data, toF, isFahrenheit }) {
     if (data) {
         return (
             <div className="currentWeatherBlock">
-                {console.log(JSON.stringify(data, null, 4))}
                 <div className="currentWeatherBlock-header">
                     <span className="currentWeatherBlock-location">{data.name}</span>
                     <img src={spotImg} alt="" className="currentWeatherBlock-spot"/>
@@ -19,7 +18,20 @@ export default function CurrentWeatherBlock({ data, toF, isFahrenheit }) {
                     </span>
                 </div>
                 <div className="currentWeatherBlock-footer">
-
+                    <table className="currentWeatherBlock-table">
+                        <tr>
+                            <th>Humidity</th>
+                            <th>Visibality</th>
+                            <th>Air pressure</th>
+                            <th>Wind</th>
+                        </tr>
+                        <tr>
+                            <th>{data.main.humidity}%</th>
+                            <th>{data.visibility/1000}km</th>
+                            <th>{data.main.pressure}hPa</th>
+                            <th>{data.wind.speed}m/s</th>
+                        </tr>
+                    </table>
                 </div>
             </div>
         )
