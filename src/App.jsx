@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 import Weather from './Weather';
 import Search from './Search';
 import Header from './Header'

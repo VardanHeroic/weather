@@ -1,4 +1,4 @@
-import searchImg from './search.png';
+import searchImg from './img/search.png';
 
 export default function Search({setCity}) {
     return (

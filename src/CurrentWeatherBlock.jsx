@@ -1,8 +1,10 @@
-import spotImg from './spot.png'
-import scaleImg from './scale.png'
+import spotImg from './img/spot.png'
+import scaleImg from './img/scale.png'
+import { getIconName } from './GetIconName'
 
 export default function CurrentWeatherBlock({ data, toF, isFahrenheit }) {
     const date = new Date()
+    console.log(date.getDay());
     if (data) {
         return (
             <div className="currentWeatherBlock">
@@ -11,10 +13,11 @@ export default function CurrentWeatherBlock({ data, toF, isFahrenheit }) {
                     <img src={spotImg} alt="" className="currentWeatherBlock-spot"/>
                 </div>
                 <div className="currentWeatherBlock-main">
-                    <span className="currentWeatherBlock-date">{`${date.toLocaleString('default', { month: 'short' })} ${date.getDay()}, ${date.toLocaleString('default', { weekday: 'short' })}`}</span>
+                    <span className="currentWeatherBlock-date">{`${date.toLocaleString('default', { month: 'short' })} ${date.getDate()}, ${date.toLocaleString('default', { weekday: 'short' })}`}</span>
                     <span className="currentWeatherBlock-temperature">
                         <img src={scaleImg} alt=""/>
                         {isFahrenheit ? toF(data.main.temp)+'°F' : Math.round(data.main.temp)+'°C'}
+                        <img className='currentWeatherBlock-icon' src={require('./img/'+getIconName(data.weather[0].icon))} alt=""/>
                     </span>
                 </div>
                 <div className="currentWeatherBlock-footer">
