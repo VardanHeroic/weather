@@ -149,9 +149,20 @@ input:checked + .slider:before {
     display: block;
     width: fit-content;
     margin: 0 auto;
-
+    text-align: center;
 }
 
+.search-error{
+    color: #CA180B;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.search-input-error{
+    outline: 2px solid #CA180B;
+}
 
 .currentWeatherBlock{
     margin: 0 auto;

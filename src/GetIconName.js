@@ -1,5 +1,4 @@
 export function getIconName(icon) {
-    console.log(icon);
     switch (icon) {
         case '01d':
         case '01n':

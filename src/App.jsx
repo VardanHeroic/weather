@@ -7,12 +7,13 @@ import { useState } from 'react';
 export default function App() {
     let [city, setCity] = useState('Yerevan')
     let [isFahrenheit, setisFahrenheit] = useState(false)
+    let [isNotFound, setIsNotFound] = useState(false)
 
     return (
         <div>
             <Header setisFahrenheit={setisFahrenheit}></Header>
-            <Search setCity={setCity}></Search>
-            <Weather isFahrenheit={isFahrenheit} city={city}></Weather>
+            <Search isNotFound={isNotFound} setIsNotFound={setIsNotFound} setCity={setCity}></Search>
+            <Weather setIsNotFound={setIsNotFound} isFahrenheit={isFahrenheit} city={city}></Weather>
         </div>
     )
 }
