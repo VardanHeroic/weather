@@ -1,6 +1,7 @@
 import spotImg from './img/spot.png'
 import scaleImg from './img/scale.png'
 import { getIconName } from './GetIconName'
+import "./css/CurrentWeatherBlock.css"
 
 export default function CurrentWeatherBlock({ data, toF, isFahrenheit }) {
     const date = new Date()
@@ -21,18 +22,20 @@ export default function CurrentWeatherBlock({ data, toF, isFahrenheit }) {
             </div>
             <div className="currentWeatherBlock-footer">
                 <table className="currentWeatherBlock-table">
-                    <tr>
-                        <th>Humidity</th>
-                        <th>Visibality</th>
-                        <th>Air pressure</th>
-                        <th>Wind</th>
-                    </tr>
-                    <tr>
-                        <th>{data.main.humidity}%</th>
-                        <th>{data.visibility / 1000}km</th>
-                        <th>{data.main.pressure}hPa</th>
-                        <th>{data.wind.speed}m/s</th>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>Humidity</th>
+                            <th>Visibality</th>
+                            <th>Air pressure</th>
+                            <th>Wind</th>
+                        </tr>
+                        <tr>
+                            <th>{data.main.humidity}%</th>
+                            <th>{data.visibility / 1000}km</th>
+                            <th>{data.main.pressure}hPa</th>
+                            <th>{data.wind.speed}m/s</th>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

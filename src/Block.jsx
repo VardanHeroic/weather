@@ -1,4 +1,5 @@
 import { getIconName } from "./GetIconName.js"
+import "./css/Block.css"
 
 export default function Block({ data, isFahrenheit, toF }) {
     const date = new Date(data.dt * 1000)

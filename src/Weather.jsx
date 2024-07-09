@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Block from './Block'
 import CurrentWeatherBlock from './CurrentWeatherBlock'
-
+import "./css/Block.css"
 
 export default function Weather({ city, isFahrenheit, setIsNotFound }) {
     const [days, setDays] = useState([])

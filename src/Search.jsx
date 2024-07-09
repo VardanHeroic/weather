@@ -1,5 +1,6 @@
 import searchImg from './img/search.png';
 import { useRef } from 'react';
+import "./css/Search.css"
 
 export default function Search({setCity, isNotFound, setIsNotFound}) {
     const searchInput = useRef(null)

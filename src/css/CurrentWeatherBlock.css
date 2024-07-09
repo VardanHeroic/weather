@@ -1,0 +1,95 @@
+.currentWeatherBlock{
+    margin: 0 auto;
+    margin-top: 48px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(255, 250, 250, 0.25), 0 4px 4px 0 rgba(253, 245, 245, 0.25);
+    background: linear-gradient(147deg, #ad36cb 26.56%, #333 68.75%);
+    border-radius: 32px;
+    max-width: 817px;
+    height: 425px;
+    padding-left: 28px;
+    padding-bottom: 5px;
+    padding-top: 35px;
+}
+
+.currentWeatherBlock-header{
+    text-align: left;
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff;
+
+}
+
+.currentWeatherBlock-main{
+    position: relative;
+}
+
+.currentWeatherBlock-spot{
+    padding-left: 3px;
+}
+
+.currentWeatherBlock-temperature{
+    line-height: 1;
+    display: inline-block;
+    margin-top: 90px;
+    font-weight: 300;
+    font-size: 70px;
+    color: #f2f1f1;
+}
+
+.currentWeatherBlock-temperature img{
+    padding-right: 25px;
+    vertical-align: middle;
+}
+
+.currentWeatherBlock-date{
+    position: absolute;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    top: 165px;
+    left: 0;
+}
+
+.currentWeatherBlock-footer{
+    margin-top: 145px;
+}
+
+.currentWeatherBlock-table{
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.currentWeatherBlock-table tr:last-child{
+    font-size: 22px;
+}
+
+.currentWeatherBlock-icon{
+    position: absolute;
+    left: 65%;
+    vertical-align: top;
+    width: 96px;
+}
+
+
+@media all and (max-width: 650px){
+    .currentWeatherBlock-icon{
+        display: none;
+    }
+}
+
+
+@media all and (max-width: 488px){
+    .currentWeatherBlock-footer{
+        display: none;
+    }
+    .currentWeatherBlock{
+        height: 260px;
+    }
+    .currentWeatherBlock-temperature{
+        margin: 45px;
+    }
+}

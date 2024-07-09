@@ -1,3 +1,6 @@
+
+import "./css/Switch.css"
+
 export default function Switch({setisFahrenheit}) {
     return (
         <label className="switch">
